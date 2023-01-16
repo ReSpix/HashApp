@@ -1,0 +1,54 @@
+﻿<Window x:Class="Hash.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hash"
+        mc:Ignorable="d"
+        Title="Хеширование" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <GroupBox Header="Добавление">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5,0,0,5">
+                            <Label Margin="0,0,14,0">Номер</Label>
+                            <TextBox Width="100" Name="add_number"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5,0,0,5">
+                            <Label>Маршрут</Label>
+                            <TextBox Width="100" Name="add_destination"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5,0,0,5">
+                            <Label Margin="0,0,16,0">Время</Label>
+                            <TextBox Width="100" Name="add_time"></TextBox>
+                        </StackPanel>
+                        <Button Margin="5,0,0,5" Click="Add_click">Добавить</Button>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Поиск">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5,0,0,5">
+                            <Label>Номер</Label>
+                            <TextBox Width="114" Name="find_number"></TextBox>
+                        </StackPanel>
+                        <Button Margin="5,0,0,5" Click="Find_click">Найти</Button>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Удаление">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5,0,0,5">
+                            <Label>Номер</Label>
+                            <TextBox Width="114" Name="delete_number"></TextBox>
+                        </StackPanel>
+                        <Button Margin="5,0,0,5" Click="Delete_click">Удалить</Button>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+            <StackPanel>
+                <TextBox Width="600" IsReadOnly="True" Height="300" VerticalScrollBarVisibility="Auto" Name="TableView"></TextBox>
+                <Label Name="result_label"></Label>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
